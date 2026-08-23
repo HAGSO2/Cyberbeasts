@@ -26,7 +26,7 @@ offset_left = -113.0
 offset_right = 113.0
 offset_bottom = 49.0
 grow_horizontal = 2
-theme_override_constants/separation = 400
+theme_override_constants/separation = 180
 
 [node name="Label" type="Label" parent="VBoxContainer" unique_id=2022310243]
 layout_mode = 2
@@ -35,24 +35,51 @@ text = "Silver uranium"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=675333350]
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer" unique_id=160500955]
+layout_mode = 2
+
+[node name="SaveButtons" type="HBoxContainer" parent="VBoxContainer/VBoxContainer" unique_id=675333350]
+custom_minimum_size = Vector2(0, 250)
+layout_mode = 2
+
+[node name="Button3" type="Button" parent="VBoxContainer/VBoxContainer/SaveButtons" unique_id=308950609]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+text = "Save 3"
+
+[node name="Button2" type="Button" parent="VBoxContainer/VBoxContainer/SaveButtons" unique_id=1209645283]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+text = "Save 2"
+
+[node name="Button" type="Button" parent="VBoxContainer/VBoxContainer/SaveButtons" unique_id=407602001]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+text = "Save 1"
+
+[node name="Button" type="Button" parent="VBoxContainer/VBoxContainer" unique_id=1384427751]
+layout_mode = 2
+text = "Back"
+
+[node name="Starter buttons" type="HBoxContainer" parent="VBoxContainer" unique_id=2082388789]
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 
-[node name="Button" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=407602001]
+[node name="New" type="Button" parent="VBoxContainer/Starter buttons" unique_id=1669024450]
 custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 text = "Nueva partida"
 script = ExtResource("1_livx0")
 
-[node name="Button2" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=1209645283]
+[node name="Load" type="Button" parent="VBoxContainer/Starter buttons" unique_id=298373359]
 custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 text = "Cargar partida"
 
-[node name="Button3" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=308950609]
+[node name="Options" type="Button" parent="VBoxContainer/Starter buttons" unique_id=1838257906]
 custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 text = "Opciones"
 
-[connection signal="pressed" from="VBoxContainer/HBoxContainer/Button" to="VBoxContainer/HBoxContainer/Button" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer/VBoxContainer/SaveButtons/Button" to="VBoxContainer/VBoxContainer/SaveButtons/Button" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer/Starter buttons/New" to="VBoxContainer/Starter buttons/New" method="_on_pressed"]
