@@ -10,6 +10,13 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-
-func _on_pressed() -> void:
+func _on_new_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/Controls.tscn")
+
+
+func _on_load_pressed(save_menu: NodePath) -> void:
+	get_node(save_menu).visible = true
+
+
+func _on_back_button_pressed(save_menu: NodePath) -> void:
+	get_node(save_menu).visible = false

@@ -9,6 +9,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_livx0")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1323234403]
 layout_mode = 1
@@ -36,28 +37,29 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer" unique_id=160500955]
+visible = false
 layout_mode = 2
 
 [node name="SaveButtons" type="HBoxContainer" parent="VBoxContainer/VBoxContainer" unique_id=675333350]
 custom_minimum_size = Vector2(0, 250)
 layout_mode = 2
 
-[node name="Button3" type="Button" parent="VBoxContainer/VBoxContainer/SaveButtons" unique_id=308950609]
+[node name="Save 1" type="Button" parent="VBoxContainer/VBoxContainer/SaveButtons" unique_id=308950609]
 custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 text = "Save 3"
 
-[node name="Button2" type="Button" parent="VBoxContainer/VBoxContainer/SaveButtons" unique_id=1209645283]
+[node name="Save 2" type="Button" parent="VBoxContainer/VBoxContainer/SaveButtons" unique_id=1209645283]
 custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 text = "Save 2"
 
-[node name="Button" type="Button" parent="VBoxContainer/VBoxContainer/SaveButtons" unique_id=407602001]
+[node name="Save 3" type="Button" parent="VBoxContainer/VBoxContainer/SaveButtons" unique_id=407602001]
 custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 text = "Save 1"
 
-[node name="Button" type="Button" parent="VBoxContainer/VBoxContainer" unique_id=1384427751]
+[node name="BackButton" type="Button" parent="VBoxContainer/VBoxContainer" unique_id=1384427751]
 layout_mode = 2
 text = "Back"
 
@@ -69,7 +71,6 @@ layout_mode = 2
 custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 text = "Nueva partida"
-script = ExtResource("1_livx0")
 
 [node name="Load" type="Button" parent="VBoxContainer/Starter buttons" unique_id=298373359]
 custom_minimum_size = Vector2(150, 0)
@@ -81,5 +82,7 @@ custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 text = "Opciones"
 
-[connection signal="pressed" from="VBoxContainer/VBoxContainer/SaveButtons/Button" to="VBoxContainer/VBoxContainer/SaveButtons/Button" method="_on_pressed"]
-[connection signal="pressed" from="VBoxContainer/Starter buttons/New" to="VBoxContainer/Starter buttons/New" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer/VBoxContainer/SaveButtons/Save 3" to="VBoxContainer/VBoxContainer/SaveButtons/Save 3" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer/VBoxContainer/BackButton" to="." method="_on_back_button_pressed" binds= [NodePath("VBoxContainer/VBoxContainer")]]
+[connection signal="pressed" from="VBoxContainer/Starter buttons/New" to="." method="_on_new_pressed"]
+[connection signal="pressed" from="VBoxContainer/Starter buttons/Load" to="." method="_on_load_pressed" binds= [NodePath("VBoxContainer/VBoxContainer")]]
