@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bsytc1d1t1qfw"
-path="res://.godot/imported/OIP.jpg-bf33ca9940b6a6278143d23f286a1053.ctex"
+uid="uid://vgnnt7njwppk"
+path="res://.godot/imported/testtileset.jpg-b303439b0feb62acd83efbaafc125900.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Controls/OIP.jpg"
-dest_files=["res://.godot/imported/OIP.jpg-bf33ca9940b6a6278143d23f286a1053.ctex"]
+source_file="res://Assets/Textures/Maps/testtileset.jpg"
+dest_files=["res://.godot/imported/testtileset.jpg-b303439b0feb62acd83efbaafc125900.ctex"]
 
 [params]
 
